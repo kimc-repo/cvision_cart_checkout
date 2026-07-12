@@ -7,7 +7,7 @@
 <!--  screenshot of the Gradio kiosk (detected boxes + basket).    -->
 <!-- ============================================================= -->
 
-![CvCart self-checkout demo — screenshot placeholder](docs/screenshot_app_placeholder.png)
+![CvCart self-checkout demo — screenshot placeholder](screenshots/screenshot_app_placeholder.png)
 
 > _Placeholder: insert a screenshot of the Gradio app showing an uploaded basket photo with detection boxes, the recognized item list, and the running total._
 
@@ -74,8 +74,6 @@ Photo → [Detect: where?] → crop → [Recognize: what?] → [Catalog match] �
 
 ---
 
----
-
 ## Results snapshot
 
 _Numbers and figures below are extracted from an actual notebook run (defaults, T4 GPU). They reflect a quick end-to-end pass — raise the speed knobs for higher-quality results._
@@ -100,17 +98,19 @@ DINOv2 wins decisively and is saved as the recognizer's feature source. The mode
 
 **Per-class diagnosis — confusion matrix (best vs. worst classes):**
 
-![Recognizer confusion matrix](docs/confusion_matrix.png)
+![Recognizer confusion matrix](screenshots/confusion_matrix.png)
 
 Clean produce (Cucumber, Avocado, Banana, Aubergine) is recognized reliably; the weakest classes are low-support SKUs and visually similar packaged goods (e.g. milk/yoghurt cartons confused with each other).
 
-**cGAN-augmented samples (weak classes):**
+**Explanation heatmap (does the recognizer look at the product, not the background?):**
 
-![cGAN-generated weak-class samples](docs/cgan_samples.png)
+![Occlusion-sensitivity explanation heatmap](screenshots/explanation_heatmap.png)
 
-Low-resolution (64px) synthetic crops that add appearance variety for the rarest SKUs before scene composition.
+An occlusion-sensitivity map over sample crops — warmer regions are where hiding the image hurts the predicted class most. Attention concentrated on the product itself (not a hand or background clutter) is the pass condition; this is the check that catches a model quietly "cheating" on shortcut cues.
 
+---
 
+## Instructions to use
 
 **Prerequisites**
 - A Google account (for Colab + Drive).
