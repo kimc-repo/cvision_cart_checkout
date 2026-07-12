@@ -9,7 +9,7 @@
 
 ![Computer vision cart self-checkout demo](screenshots/app_screenshot.png)
 
-> Gradio app showing an uploaded basket photo with detection boxes, the recognized item list, and the running total._
+> Gradio app showing an uploaded basket photo with detection boxes, the recognized item list, and the running total.
 
 ---
 
