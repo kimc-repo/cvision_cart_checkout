@@ -7,7 +7,7 @@
 <!--  screenshot of the Gradio kiosk (detected boxes + basket).    -->
 <!-- ============================================================= -->
 
-![CvCart self-checkout demo — screenshot placeholder](screenshots/screenshot_app_placeholder.png)
+![Computer vision cart self-checkout demo](screenshots/app_screenshot.png)
 
 > _Placeholder: insert a screenshot of the Gradio app showing an uploaded basket photo with detection boxes, the recognized item list, and the running total._
 
